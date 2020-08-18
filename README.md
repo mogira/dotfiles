@@ -1,4 +1,9 @@
 # mogira's dotfiles
-If WSL, please declare the following user defined environment variables on Windows.
+## Notes
+If use on WSL, declare the following user defined environment variables on Windows.
 * DESKTOP=%USERPROFILE%\\Desktop
-* WSLENV=USERNAME:USERPROFILE:DESKTOP
+* WSLENV=USERNAME:USERPROFILE/p:DESKTOP/p
+
+## Installation
+```./install.sh```
+
