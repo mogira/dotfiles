@@ -1,0 +1,14 @@
+if [ -r ~/.wsl_shrc -a -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
+    source ~/.wsl_shrc
+fi
+
+if [ -r ~/.sh_aliases ]; then
+    source ~/.sh_aliases
+fi
+
+if [ -r ~/.dircolors -a -x /usr/bin/dircolors ]; then
+    eval "$(/usr/bin/dircolors -b ~/.dircolors)"
+fi
+
+export PS1="[\[\e[1;34m\]\w\[\e[m\]] \[\e[1;31m\]$\[\e[m\] "
+

@@ -1,0 +1,4 @@
+if [ $WSLINTEROP == "enabled" ]; then
+    alias here='explorer.exe .'
+fi
+

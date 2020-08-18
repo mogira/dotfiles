@@ -1,0 +1,9 @@
+WSLINTEROP="disabled"
+if [ -r /proc/sys/fs/binfmt_misc/WSLInterop ]; then
+    WSLINTEROP=`cat /proc/sys/fs/binfmt_misc/WSLInterop | head -n 1`
+fi
+
+if [ -r ~/.wsl_sh_aliases ]; then
+    source ~/.wsl_sh_aliases
+fi
+
