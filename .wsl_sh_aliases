@@ -1,3 +1,6 @@
+# If not running on WSL, don't do anything
+[ ! -f /proc/sys/fs/binfmt_misc/WSLInterop ] && return
+
 if [ $WSLINTEROP == "enabled" ]; then
     alias here='explorer.exe .'
 fi

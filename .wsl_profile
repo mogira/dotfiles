@@ -1,0 +1,8 @@
+# If not running on WSL, don't do anything
+[ ! -f /proc/sys/fs/binfmt_misc/WSLInterop ] && return
+
+export WSLINTEROP="disabled"
+if [ -r /proc/sys/fs/binfmt_misc/WSLInterop ]; then
+    export WSLINTEROP=`cat /proc/sys/fs/binfmt_misc/WSLInterop | head -n 1`
+fi
+
