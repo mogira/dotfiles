@@ -1,6 +1,7 @@
-" File: Encoding
+" File: Encoding & Format
 set encoding=utf-8
 set fileencoding=utf-8
+set nofixeol
 
 " File: Generated Files
 set nobackup
@@ -50,7 +51,7 @@ set belloff=all
 set backspace=indent,eol,start
 set splitbelow
 set splitright
-set mouse=a
+set mouse=
 
 
 " KeyMap: [Insert] Esc
