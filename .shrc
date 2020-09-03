@@ -11,4 +11,5 @@ if [ -r ~/.dircolors -a -x /usr/bin/dircolors ]; then
 fi
 
 export PS1="[\[\e[1;34m\]\w\[\e[m\]] \[\e[1;31m\]$\[\e[m\] "
+export LESS="-IRMXSq"
 
