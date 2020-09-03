@@ -1,3 +1,8 @@
+" Workaround: https://github.com/vim-jp/isses/issues/578
+set t_u7=
+set t_RV=
+
+
 " File: Encoding & Format
 set encoding=utf-8
 set fileencoding=utf-8
