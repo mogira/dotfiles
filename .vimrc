@@ -45,9 +45,16 @@ set ignorecase
 set smartcase
 
 
+" Beep:
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+    autocmd GUIEnter * set visualbell t_vb=
+endif
+set belloff=all
+
+
 " Other:
 "set autochdir
-set belloff=all
 set backspace=indent,eol,start
 set splitbelow
 set splitright
@@ -73,10 +80,13 @@ cnoremap <F1> <Nop>
 inoremap <F1> <Nop>
 
 
-" Command: vsn vsplit -> next
+" Command: VSN
 command! VSN :vsplit | :next
 
-" Command: Hard/Easy Mode (Disable/Enable Cursor keys)
+" Command: SPN
+command! SPN :split | :next
+
+" Command: Hard Mode (Disable Cursor keys)
 function! HardMode ()
 	noremap <Up> <Nop>
 	noremap <Down> <Nop>
@@ -84,6 +94,8 @@ function! HardMode ()
 	noremap <Right> <Nop>
 endfunction
 command! HardMode call HardMode()
+
+" Command: Easy Mode (Enable Cursor keys)
 function! EasyMode ()
 	noremap <Up> <Up>
 	noremap <Down> <Down>
