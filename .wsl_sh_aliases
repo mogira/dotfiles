@@ -3,5 +3,12 @@
 
 if [ $WSLINTEROP == "enabled" ]; then
     alias here='explorer.exe .'
-fi
 
+    cpd() {
+        cp $@ ${DESKTOP}
+    }
+
+    mvd() {
+        mv $@ ${DESKTOP}
+    }
+fi
