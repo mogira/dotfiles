@@ -30,8 +30,13 @@ autocmd ColorScheme * highlight Normal ctermbg=none
 autocmd ColorScheme * highlight LineNr ctermbg=none
 colorscheme molokai
 
-" Visual: Others
+" Visual: Cursor
 set cursorline
+let &t_EI .= "\e[2 q"  " Normal Mode & Visual Mode
+let &t_SI .= "\e[6 q"  " Insert Mode
+let &t_SR .= "\e[4 q"  " Select Mode
+
+" Visual: Others
 set number
 set nowrap
 
