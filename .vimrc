@@ -90,6 +90,14 @@ cnoremap <F1> <Nop>
 inoremap <F1> <Nop>
 
 
+" Command: W (save with sudo)
+function W (...)
+    let l:filename = a:0 >= 1 ? a:1 : expand("%:p")
+    execute "silent write !sudo tee " . l:filename . " >/dev/null"
+    edit!
+endfunction
+command! W call W(<f-args>)
+
 " Command: VSN
 command! VSN :vsplit | :next
 
