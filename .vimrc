@@ -99,10 +99,10 @@ endfunction
 command! W call W(<f-args>)
 
 " Command: VSN
-command! VSN :vsplit | :next
+command! VSN vsplit | next
 
 " Command: SPN
-command! SPN :split | :next
+command! SPN split | next
 
 " Command: Hard Mode (Disable Cursor keys)
 function! HardMode ()
